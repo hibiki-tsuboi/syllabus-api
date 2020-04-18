@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 2020_04_18_090108) do
     t.integer "period", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["title", "weekday", "period"], name: "index_subjects_on_title_and_weekday_and_period", unique: true
   end
 
   create_table "teachers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|

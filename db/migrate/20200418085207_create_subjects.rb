@@ -6,8 +6,6 @@ class CreateSubjects < ActiveRecord::Migration[5.2]
       t.integer :period, null: false
 
       t.timestamps
-
-      t.index [:title, :weekday, :period], unique: true
     end
   end
 end
