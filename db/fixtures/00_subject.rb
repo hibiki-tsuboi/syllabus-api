@@ -10,3 +10,4 @@ def self.seeding(id, title, weekday, period)
 end
 
 seeding(1, '統計基礎', 'friday', 3)
+seeding(2, '分析基礎', 'friday', 1)

@@ -4,10 +4,8 @@ module Api
   module V1
     class LecturesController < ApplicationController
       def index
-        # subjects = Subject.where(title: '統計基礎')
-        # render json: { subjects: subjects }
-        @hoge = Subject.first
-        render json: @hoge
+        @subjects = Subject.where('title LIKE ?', "%#{params[:keyword]}%")
+        render json: @subjects, root: 'subjects', adapter: :json
       end
     end
   end
