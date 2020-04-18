@@ -4,8 +4,10 @@ module Api
   module V1
     class LecturesController < ApplicationController
       def index
-        subjects = Subject.order(created_at: :desc)
-        render json: { subjects: subjects }
+        # subjects = Subject.where(title: '統計基礎')
+        # render json: { subjects: subjects }
+        @hoge = Subject.first
+        render json: @hoge
       end
     end
   end
