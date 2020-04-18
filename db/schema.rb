@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_18_085612) do
+ActiveRecord::Schema.define(version: 2020_04_18_090108) do
+
+  create_table "lectures", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "subject_id", null: false
+    t.string "title", null: false
+    t.date "date", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["subject_id"], name: "index_lectures_on_subject_id"
+  end
 
   create_table "subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "title", null: false
@@ -29,5 +38,6 @@ ActiveRecord::Schema.define(version: 2020_04_18_085612) do
     t.index ["subject_id"], name: "index_teachers_on_subject_id"
   end
 
+  add_foreign_key "lectures", "subjects"
   add_foreign_key "teachers", "subjects"
 end
