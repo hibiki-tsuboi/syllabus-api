@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 要件
+1. エンドポイントは「授業検索」の１つ
+1. 科目(Subject)は授業(Lectures)を複数所持し、担任(Teacher)が1人いるものとする
+1. Responseにおいて科目ごとに授業は昇順にソートされている必要がある
+1. Weekdayは授業の曜日, periodはその時限を表す。またその時、複数の時限に跨る授業は想定しないものとする => つまり、授業は週に１限分しか開校されない
+1. seedに教師1名あたり授業2つは持っていて、教師が２名いるという状況を作れる実装をして欲しい
