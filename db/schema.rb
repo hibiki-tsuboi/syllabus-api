@@ -10,34 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_18_070146) do
-
-  create_table "lectures", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "title", null: false
-    t.date "date", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+ActiveRecord::Schema.define(version: 2020_04_18_085612) do
 
   create_table "subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "title", null: false
     t.string "weekday", null: false
     t.integer "period", null: false
-    t.bigint "lecture_id", null: false
-    t.bigint "teacher_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["lecture_id"], name: "index_subjects_on_lecture_id"
-    t.index ["teacher_id"], name: "index_subjects_on_teacher_id"
     t.index ["title", "weekday", "period"], name: "index_subjects_on_title_and_weekday_and_period", unique: true
   end
 
   create_table "teachers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "subject_id", null: false
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["subject_id"], name: "index_teachers_on_subject_id"
   end
 
-  add_foreign_key "subjects", "lectures"
-  add_foreign_key "subjects", "teachers"
+  add_foreign_key "teachers", "subjects"
 end
