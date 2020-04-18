@@ -1,7 +1,12 @@
 # frozen_string_literal: true
 
-Subject.insert_all!(
-  [
-    { id: 1, title: '統計基礎', weekday: 'friday', period: 3, created_at: Time.current, updated_at: Time.current },
-  ]
-)
+def self.seeding(id, title, weekday, period)
+  Subject.seed(:id) do |s|
+    s.id      = id
+    s.title   = title
+    s.weekday = weekday
+    s.period  = period
+  end
+end
+
+seeding(1, '統計基礎', 'friday', 3)

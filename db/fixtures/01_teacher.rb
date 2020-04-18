@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
-Teacher.insert_all!(
-  [
-    { id: 1, subject_id: 1, name: '山田太郎', created_at: Time.current, updated_at: Time.current },
-  ]
-)
+def self.seeding(id, subject_id, name)
+  Teacher.seed(:id) do |s|
+    s.id         = id
+    s.subject_id = subject_id
+    s.name       = name
+  end
+end
+
+seeding(1, 1, '山田太郎')
