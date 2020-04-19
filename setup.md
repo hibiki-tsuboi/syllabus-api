@@ -6,9 +6,7 @@
 ### 2. dockerの初期セットアップ
 - `$ docker-compose build`
 - `$ docker-compose up -d`
-- `$ docker-compose run web rails db:create`
-- `$ docker-compose run web rails db:migrate`
-- `$ docker-compose run web rails db:seed_fu`
+- `$ docker-compose run web rails db:create db:migrate db:seed_fu`
 
 ### 3. サーバ起動
 - `$ docker-compose up -d`
