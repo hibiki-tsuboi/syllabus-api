@@ -5,8 +5,8 @@
 
 ### 2. dockerの初期セットアップ
 - `$ docker-compose build`
-- `$ docker-compose up -d`
-- `$ docker-compose run web rails db:create db:migrate db:seed_fu`
+- `$ docker-compose run web bundle install`
+- `$ docker-compose run --rm web bundle exec rails db:create db:migrate db:seed_fu`
 
 ### 3. サーバ起動
 - `$ docker-compose up -d`
@@ -15,4 +15,4 @@
 - `$ docker-compose down`
 
 ### 5. ER図作成
-- `$ docker-compose run web rails erd`
+- `$ docker-compose run --rm web bundle exec rails erd`
