@@ -31,6 +31,7 @@ group :development, :test do
   gem 'rubocop-rails'
   gem 'brakeman'
   gem 'pry-rails'
+  gem 'rspec-rails'
 end
 
 group :development do

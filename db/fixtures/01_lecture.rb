@@ -9,7 +9,7 @@ def self.seeding(id, subject_id, title, date)
   end
 end
 
-seeding(1, 1, 'ガイダンス', '20200423')
-seeding(2, 1, '確率変数と確率分布', '20200430')
-seeding(3, 2, 'ガイダンス', '20200423')
-seeding(4, 2, '分析変数と分析分布', '20200430')
+seeding(1, 1, 'ガイダンスA', '20200423')
+seeding(2, 1, '確率変数と確率分布AB', '20200430')
+seeding(3, 2, 'ガイダンスAC', '20200423')
+seeding(4, 2, '分析変数と分析分布AC', '20200430')

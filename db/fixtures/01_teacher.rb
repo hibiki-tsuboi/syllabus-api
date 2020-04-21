@@ -8,5 +8,5 @@ def self.seeding(id, subject_id, name)
   end
 end
 
-seeding(1, 1, '山田太郎')
-seeding(2, 2, '佐藤花子')
+seeding(1, 1, '山田太郎A')
+seeding(2, 2, '佐藤花子A')

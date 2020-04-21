@@ -11,3 +11,4 @@ end
 
 seeding(1, '統計基礎', 'friday', 3)
 seeding(2, '分析基礎', 'friday', 1)
+seeding(3, '数学基礎', 'monday', 1)
