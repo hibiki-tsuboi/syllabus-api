@@ -14,6 +14,9 @@
 ### docker停止
 - `$ docker-compose down`
 
+### リクエスト方法（部分一致検索）
+- `$ curl http://localhost:3000/api/v1/lectures?keyword=ガイダンス&teacher_name=山田`
+
 ### ER図生成
 - `$ docker-compose run --rm web bundle exec rails erd`
 
