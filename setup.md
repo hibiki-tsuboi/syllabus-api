@@ -8,17 +8,17 @@
 - `$ docker-compose run web bundle install`
 - `$ docker-compose run --rm web bundle exec rails db:create db:migrate db:seed_fu`
 
-### サーバ起動
+### docker起動
 - `$ docker-compose up -d`
 
-### サーバ停止
+### docker停止
 - `$ docker-compose down`
 
-### ER図作成
+### ER図生成
 - `$ docker-compose run --rm web bundle exec rails erd`
 
-### rubocop
+### 静的解析（コードチェック）
 - `$ docker-compose run --rm web bundle exec rubocop`
 
-### brakeman
+### 静的解析（セキュリティチェック）
 - `$ docker-compose run --rm web bundle exec brakeman`
