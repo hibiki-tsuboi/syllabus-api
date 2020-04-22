@@ -5,7 +5,7 @@
 
 ### dockerの初期セットアップ
 - `$ docker-compose build`
-- `$ docker-compose run web bundle install`
+- `$ docker-compose run --rm web bundle install`
 - `$ docker-compose run --rm web bundle exec rails db:create db:migrate db:seed_fu`
 
 ### docker起動
