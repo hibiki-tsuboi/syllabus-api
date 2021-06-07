@@ -4,6 +4,10 @@ module Api
   module V1
     class LecturesController < ApplicationController
       def index
+        response = Faraday.get "https://unipos.me/apple-app-site-association"
+        results = JSON.parse(response.body)
+        puts "#####: #{results['applinks']}"
+
         subject_ids = []
         if params[:keyword].present?
           @lecrures = Lecture.where('title LIKE ?', "%#{params[:keyword]}%").select(:subject_id).distinct
