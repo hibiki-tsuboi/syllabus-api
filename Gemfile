@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 # aブランチで追加
+# aブランチで追加2
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
