@@ -17,7 +17,7 @@ gem 'puma'
 # gem 'bcrypt', '~> 3.1.7'
 # Data import
 gem 'seed-fu'
-
+# masterで追加
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
